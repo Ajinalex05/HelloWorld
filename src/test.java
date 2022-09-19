@@ -1,1 +1,0 @@
-all erros sorry
