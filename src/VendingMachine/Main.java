@@ -1,14 +1,17 @@
 package VendingMachine;
 
 
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         StockItems s = new StockItems();
+        boolean flag = true;
+
+        while(flag) {
             WelcomeNote w = new WelcomeNote();
-            System.out.println(s.getTotalChange());
             w.note();
             s.showItems();
             System.out.println("\nEnter 0 to Exit\n\nplease enter  the product code");
@@ -35,6 +38,10 @@ public class Main {
             } else {
                 System.out.println("    ---> Wrong input... Please try again <---");
             }
+                System.out.println("\n\n ENTER  1 TO CONTINUE\n ENTER 0 TO EXIT");
+                int f = sc.nextInt();
+                if (f == 0) flag = false;
+        }
 
     }
 }
